@@ -14,7 +14,7 @@ class DropColumnsFromEncaminhamentosTable extends Migration
     public function up()
     {
         Schema::table('encaminhamentos', function (Blueprint $table) {
-            Schema::table('users', function (Blueprint $table) {
+            Schema::table('encaminhamentos', function (Blueprint $table) {
                 $table->dropColumn(['profissional', 'saida', 'chegada']);
             });
         });
