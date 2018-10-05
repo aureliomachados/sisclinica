@@ -55,7 +55,7 @@ class EncaminhamentoController extends AppBaseController
 
         $encaminhamento = $this->encaminhamentoRepository->create($input);
 
-        Flash::success('Encaminhamento saved successfully.');
+        Flash::success('Encaminhamento adicionado com sucesso!.');
 
         return redirect(route('encaminhamentos.index'));
     }
@@ -72,7 +72,7 @@ class EncaminhamentoController extends AppBaseController
         $encaminhamento = $this->encaminhamentoRepository->findWithoutFail($id);
 
         if (empty($encaminhamento)) {
-            Flash::error('Encaminhamento not found');
+            Flash::error('Encaminhamento não encontrado');
 
             return redirect(route('encaminhamentos.index'));
         }
@@ -92,7 +92,7 @@ class EncaminhamentoController extends AppBaseController
         $encaminhamento = $this->encaminhamentoRepository->findWithoutFail($id);
 
         if (empty($encaminhamento)) {
-            Flash::error('Encaminhamento not found');
+            Flash::error('Encaminhamento não encontrado');
 
             return redirect(route('encaminhamentos.index'));
         }
@@ -113,14 +113,14 @@ class EncaminhamentoController extends AppBaseController
         $encaminhamento = $this->encaminhamentoRepository->findWithoutFail($id);
 
         if (empty($encaminhamento)) {
-            Flash::error('Encaminhamento not found');
+            Flash::error('Encaminhamento não encontrado');
 
             return redirect(route('encaminhamentos.index'));
         }
 
         $encaminhamento = $this->encaminhamentoRepository->update($request->all(), $id);
 
-        Flash::success('Encaminhamento updated successfully.');
+        Flash::success('Encaminhamento atualizado com sucesso.');
 
         return redirect(route('encaminhamentos.index'));
     }
@@ -137,14 +137,14 @@ class EncaminhamentoController extends AppBaseController
         $encaminhamento = $this->encaminhamentoRepository->findWithoutFail($id);
 
         if (empty($encaminhamento)) {
-            Flash::error('Encaminhamento not found');
+            Flash::error('Encaminhamento não encontrado');
 
             return redirect(route('encaminhamentos.index'));
         }
 
         $this->encaminhamentoRepository->delete($id);
 
-        Flash::success('Encaminhamento deleted successfully.');
+        Flash::success('Encaminhamento deletado com sucesso.');
 
         return redirect(route('encaminhamentos.index'));
     }

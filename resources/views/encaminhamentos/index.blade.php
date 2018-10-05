@@ -15,6 +15,11 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
+                <?php
+                Use App\Models\Encaminhamento;
+
+                return Encaminhamento::all();
+                ?>
                     @include('encaminhamentos.table')
             </div>
         </div>
