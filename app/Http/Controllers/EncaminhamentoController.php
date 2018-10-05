@@ -6,7 +6,6 @@ use App\DataTables\EncaminhamentoDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateEncaminhamentoRequest;
 use App\Http\Requests\UpdateEncaminhamentoRequest;
-use App\Models\Encaminhamento;
 use App\Repositories\EncaminhamentoRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -30,8 +29,7 @@ class EncaminhamentoController extends AppBaseController
      */
     public function index(EncaminhamentoDataTable $encaminhamentoDataTable)
     {
-//        return $encaminhamentoDataTable->render('encaminhamentos.index');
-        return Encaminhamento::all();
+        return $encaminhamentoDataTable->render('encaminhamentos.index');
     }
 
     /**
