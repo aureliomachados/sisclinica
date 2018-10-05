@@ -1,5 +1,9 @@
 <!-- Paciente Field -->
 <div class="form-group col-sm-6">
+    {!! Form::label('data', 'Data:') !!}
+    {!! Form::date('data', null, ['class' => 'form-control']) !!}
+</div>
+<div class="form-group col-sm-6">
     {!! Form::label('paciente', 'Nome do paciente:') !!}
     {!! Form::text('paciente', null, ['class' => 'form-control']) !!}
 </div>

@@ -29,6 +29,7 @@ class Encaminhamento extends Model
 
 
     public $fillable = [
+        'data',
         'paciente',
         'idade',
         'endereco',
@@ -44,6 +45,7 @@ class Encaminhamento extends Model
      * @var array
      */
     protected $casts = [
+        'data' => 'date',
         'paciente' => 'string',
         'idade' => 'string',
         'endereco' => 'string',
@@ -59,6 +61,7 @@ class Encaminhamento extends Model
      * @var array
      */
     public static $rules = [
+        'data' => 'required',
         'paciente' => 'required',
         'idade' => 'required',
         'endereco' => 'required',
