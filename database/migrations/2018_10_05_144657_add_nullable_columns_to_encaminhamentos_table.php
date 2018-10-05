@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddNullableToColumnsFromEncaminhamentos extends Migration
+class AddNullableColumnsToEncaminhamentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,8 +27,8 @@ class AddNullableToColumnsFromEncaminhamentos extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['profissional', 'saida', 'chegada']);
+        Schema::table('encaminhamentos', function (Blueprint $table) {
+            //
         });
     }
 }
