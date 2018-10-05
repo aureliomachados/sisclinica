@@ -1,3 +1,8 @@
+<!-- Created At Field -->
+<div class="form-group">
+    {!! Form::label('data', 'Data:') !!}
+    <p>{!! $encaminhamento->created_at !!}</p>
+</div>
 <!-- Id Field -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
@@ -51,10 +56,3 @@
     {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $encaminhamento->created_at !!}</p>
 </div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $encaminhamento->updated_at !!}</p>
-</div>
-
