@@ -1,13 +1,13 @@
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('data', 'Data:') !!}
-    <p>{!! $encaminhamento->created_at !!}</p>
+    <p>{!! $encaminhamento->data->format('m/m/Y') !!}</p>
 </div>
-<!-- Id Field -->
-<div class="form-group">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{!! $encaminhamento->id !!}</p>
-</div>
+{{--<!-- Id Field -->--}}
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('id', 'Id:') !!}--}}
+    {{--<p>{!! $encaminhamento->id !!}</p>--}}
+{{--</div>--}}
 
 <!-- Paciente Field -->
 <div class="form-group">
