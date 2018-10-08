@@ -18,7 +18,10 @@ class EncaminhamentoDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'encaminhamentos.datatables_actions');
+        return $dataTable->addColumn('action', 'encaminhamentos.datatables_actions')
+            ->filterColumn('data', function ($query){
+                $query->whereRaw("DATE_FORMAT(created_at, '%d-%m-%Y')");
+            });
     }
 
     /**
