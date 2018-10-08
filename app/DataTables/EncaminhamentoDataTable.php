@@ -20,7 +20,7 @@ class EncaminhamentoDataTable extends DataTable
         $dataTable = new EloquentDataTable($query);
 
         $dataTable->editColumn('data', function ($query){
-            return $query->data ? with(new Carbon($query->data))->format('m/d/Y') : '';
+            return $query->data ? with(new Carbon($query->data))->format('d/m/Y') : '';
         });
 
         return $dataTable->addColumn('action', 'encaminhamentos.datatables_actions');
