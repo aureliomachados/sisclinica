@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\Encaminhamento;
+use Carbon\Carbon;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
@@ -17,6 +18,10 @@ class EncaminhamentoDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
+
+        $dataTable->editColumn('data', function ($query){
+            return $query->data ? with(new Carbon($query->data))->format('m/d/Y') : '';
+        });
 
         return $dataTable->addColumn('action', 'encaminhamentos.datatables_actions');
     }
