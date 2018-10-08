@@ -19,6 +19,7 @@ class EncaminhamentoDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
+        //format the date of data column to a local timezone
         $dataTable->editColumn('data', function ($query){
             return $query->data ? with(new Carbon($query->data))->format('d/m/Y') : '';
         });

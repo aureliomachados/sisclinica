@@ -20,6 +20,7 @@ class EncaminhamentoRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'data',
         'paciente',
         'idade',
         'endereco',
