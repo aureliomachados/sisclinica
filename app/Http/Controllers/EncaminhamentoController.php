@@ -19,6 +19,7 @@ class EncaminhamentoController extends AppBaseController
     public function __construct(EncaminhamentoRepository $encaminhamentoRepo)
     {
         $this->encaminhamentoRepository = $encaminhamentoRepo;
+        $this->middleware('auth');
     }
 
     /**
