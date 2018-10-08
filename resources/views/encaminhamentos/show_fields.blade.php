@@ -51,8 +51,8 @@
     <p>{!! $encaminhamento->chegada !!}</p>
 </div>
 
-<!-- Created At Field -->
-<div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $encaminhamento->created_at !!}</p>
-</div>
+{{--<!-- Created At Field -->--}}
+{{--<div class="form-group">--}}
+    {{--{!! Form::label('created_at', 'Created At:') !!}--}}
+    {{--<p>{!! $encaminhamento->created_at !!}</p>--}}
+{{--</div>--}}
