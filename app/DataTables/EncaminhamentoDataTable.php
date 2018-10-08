@@ -64,6 +64,7 @@ class EncaminhamentoDataTable extends DataTable
     protected function getColumns()
     {
         return [
+            'data',
             'paciente',
             'idade',
             'endereco',
