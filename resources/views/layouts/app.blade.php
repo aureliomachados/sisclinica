@@ -100,7 +100,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © {{ date_format('Y', strtotime(\Carbon\Carbon::now())) }} <a href="#">Guedes TI</a>.</strong> Todos os direitos reservados.
+            <strong>Copyright © {{ \Carbon\Carbon::now()->format('d/m/Y') }} <a href="#">Guedes TI</a>.</strong> Todos os direitos reservados.
         </footer>
 
     </div>
